@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "partial-js": "^1.1.8",
+    "partial.js": "^1.4.0"
+  }
+}
