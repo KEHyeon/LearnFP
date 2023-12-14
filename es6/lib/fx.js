@@ -11,6 +11,10 @@ const map = curry((f, iter) => {
   return res;
 });
 
+const pipe =
+  (f, ...fs) =>
+  (...as) =>
+    go(f(...as), ...fs);
 const filter = curry((f, iter) => {
   let res = [];
   for (const a of iter) {
@@ -30,4 +34,5 @@ const reduce = curry((f, acc, iter) => {
   return acc;
 });
 
+const go = (...args) => reduce((a, f) => f(a), args);
 const log = console.log;
