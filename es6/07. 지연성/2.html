@@ -1,0 +1,25 @@
+<script src="../lib/fx.js"></script>
+
+<script>
+  var it = L.map((a) => a + 10, [1, 2, 3]);
+  log(it.next());
+  log(it.next());
+</script>
+
+<script>
+  go(
+    range(10),
+    map((n) => n + 10),
+    filter((n) => n % 2),
+    take(2),
+    log
+  );
+
+  go(
+    L.range(10),
+    L.map((n) => n + 10),
+    L.filter((n) => n % 2),
+    take(2),
+    log
+  );
+</script>
